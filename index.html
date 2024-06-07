@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<header id="header">
+  <div class="balance-info">
+    <p>My balance</p>
+    <p id="total">$921.48</p>
+  </div>
+  <div class="app-logo">
+    <img src="./images/logo.svg" alt="app-logo" class="card">
+  </div>
+</header>
+<main class="main-container">
+  <section class="graph-container">
+    <h1 class="title">Spending - Last 7 days</h1>
+    <div class="stats-graphic">
+      <!--<div class="stat" id="mon"><span class="pop-up mon_pop-up">1</span></div>
+      <div class="stat" id="tue"><span class="pop-up tue_pop-up">1</span></div>
+      <div class="stat" id="wed"><span class="pop-up wed_pop-up">1</span></div>
+      <div class="stat" id="thu"><span class="pop-up thu_pop-up">1</span></div>
+      <div class="stat now" id="fri"><span class="pop-up fri_pop-up">1</span></div>
+      <div class="stat" id="sat"><span class="pop-up sat_pop-up">1</span></div>
+      <div class="stat" id="sun"><span class="pop-up sun_pop-up">1</span></div>-->
+    </div>
+    <div class="stats-days">
+      <!--<span>mon</span>
+      <span>tue</span>
+      <span>wed</span>
+      <span>thu</span>
+      <span>fri</span>
+      <span>sat</span>
+      <span>sun</span>-->
+    </div>
+  </section>
+  <section class="month-balance">
+    <div class="month-spent">
+      <p >Total this month</p>
+      <h2 id="total-month">$478.33</h2>
+    </div>
+    <div class="month-difference">
+      <p class="percent" id="percentual-change">+2.4%</p>
+      <p>from last month</p>
+    </div>
+  </section>
+</main>  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/jenn-acosta7/">Jenn Acosta</a>.
+  </div>
+  <script src="./app/app.js" type="module"></script>
+</body>
+</html>

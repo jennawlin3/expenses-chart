@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+--soft-red: hsl(10, 79%, 65%);
+--cyan: hsl(186, 34%, 60%);
+--dark-brown: hsl(25, 47%, 15%);
+--medium-brown: hsl(28, 10%, 53%);
+--cream: hsl(27, 66%, 92%);
+--very-pale-orange: hsl(33, 100%, 98%);
+font-size: 18px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cream);  font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+header {
+    background-color: var(--soft-red);
+    width: 90vw;
+    margin-top: 80px;
+    height: 90px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-info p {
+    color: var(--cream);
+    font-size: 0.9rem;
+    margin-left: 30px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.balance-info p:nth-child(2) {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.app-logo {
+    margin-right: 30px;
+}
+
+.app-logo img {
+    width: 60px;
+}
+
+.main-container {
+    margin-top: 20px;
+    background-color: #fff;
+    width: 90vw;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.title {
+    color: var(--dark-brown);
+    margin-bottom: 40px;
+    font-size: 1.3em;
+}
+
+.stats-graphic {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.stat {
+    background-color: var(--soft-red);
+    flex-grow: 1;
+    position: relative;
+    border-radius: 5px;
+}
+
+.pop-up {
+    content: "";
+    background-color: var(--dark-brown);
+    left: -10px;
+    width: 65px;
+    height: 25px;
+    position: absolute;
+    top: -30px;
+    border-radius: 5px;
+    display: none;
+    color: var(--cream);
+    justify-content: flex-end;
+    padding-right: 10px;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.pop-up::before {
+    content: "$ ";
+    position: absolute;
+    left: 5px;
+}
+
+#mon:hover, #tue:hover, #wed:hover, #thu:hover, #fri:hover, #sat:hover, #sun:hover {
+    cursor: pointer;
+}
+
+#mon:hover > .pop-up {
+    display: flex;
+}
+
+#tue:hover > .pop-up { 
+    display: flex;
+}
+
+#wed:hover > .pop-up {
+    display: flex;
+}
+
+#thu:hover > .pop-up {
+    display: flex;
+}
+
+#fri:hover > .pop-up {
+    display: flex;
+}
+
+#sat:hover > .pop-up {
+    display: flex;
+}
+
+#sun:hover > .pop-up {
+    display: flex;
+}
+
+.high {
+    background-color: var(--cyan);
+}
+
+.stats-days {
+    display: flex;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--cream);
+    gap: 20px;
+}
+
+.stats-days span {
+    flex-grow: 1;
+    color: var(--medium-brown);
+    text-align: center;
+    font-size: 0.7rem;
+    width: 30px;
+}
+
+.month-balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    margin-top: 30px;
+}
+
+.month-spent p {
+    margin-bottom: 10px;
+    color: var(--medium-brown);
+}
+
+.month-spent h2 {
+    color: var(--dark-brown);
+    font-size: 1.4em;
+}
+
+.month-difference p:nth-child(1) {
+    color: var(--dark-brown);
+    font-weight: 700;
+    text-align: end;
+}
+
+.month-difference p:nth-child(2) {
+    color: var(--medium-brown);
+    font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        width: 450px;
+    }
+
+    .main-container {
+        width: 450px;
+    }
+}
