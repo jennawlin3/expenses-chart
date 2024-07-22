@@ -58,7 +58,7 @@ header {
 
 .main-container {
     margin-top: 20px;
-    background-color: #fff;
+    background-color: var(--very-pale-orange);
     width: 90vw;
     padding: 30px 20px;
     border-radius: 10px;
@@ -87,24 +87,29 @@ header {
 .pop-up {
     content: "";
     background-color: var(--dark-brown);
-    left: -10px;
-    width: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55px;
     height: 25px;
     position: absolute;
     top: -30px;
     border-radius: 5px;
-    display: none;
     color: var(--cream);
-    justify-content: flex-end;
-    padding-right: 10px;
+    font-size: 0.7rem;
+    justify-content: center;
     align-items: center;
-    font-size: 0.8rem;
+    padding-left: 10px;
+    display: none;
 }
 
 .pop-up::before {
     content: "$ ";
     position: absolute;
     left: 5px;
+}
+
+.stat:hover {
+    background-color: hsl(10, 79%, 65%, .7);
 }
 
 #mon:hover, #tue:hover, #wed:hover, #thu:hover, #fri:hover, #sat:hover, #sun:hover {
@@ -143,8 +148,13 @@ header {
     background-color: var(--cyan);
 }
 
+.high:hover {
+    background-color: hsl(186, 34%, 60%, .6);
+}
+
 .stats-days {
     display: flex;
+    padding-top: 10px;
     padding-bottom: 30px;
     border-bottom: 2px solid var(--cream);
     gap: 20px;
@@ -172,7 +182,7 @@ header {
 
 .month-spent h2 {
     color: var(--dark-brown);
-    font-size: 1.4em;
+    font-size: 1.8em;
 }
 
 .month-difference p:nth-child(1) {
@@ -193,5 +203,17 @@ header {
 
     .main-container {
         width: 450px;
+    }
+
+    .balance-info p {
+        font-size: 0.8em;
+    }
+
+    .month-spent p {
+        font-size: 0.8em;
+    }
+
+    .month-difference p:nth-child(2) {
+        font-size: 0.8em;
     }
 }
